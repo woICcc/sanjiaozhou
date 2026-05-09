@@ -50,6 +50,21 @@ router.post('/', authenticateToken, async (req, res) => {
     const { title, content, category } = req.body
     if (!title || !content) return res.status(400).json({ error: '标题和正文为必填' })
 
+    // 普通用户每日限发3篇，管理员不限
+    if (req.user.role !== 'admin') {
+      const today = new Date()
+      today.setHours(0, 0, 0, 0)
+      const todayCount = await prisma.article.count({
+        where: {
+          userId: req.user.id,
+          createdAt: { gte: today }
+        }
+      })
+      if (todayCount >= 3) {
+        return res.status(429).json({ error: '每日最多发布3篇攻略' })
+      }
+    }
+
     const article = await prisma.article.create({
       data: { userId: req.user.id, title, content, category },
       include: { user: { select: { id: true, username: true } } }

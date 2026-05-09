@@ -20,6 +20,7 @@ export default function StrategyList() {
     <div>
       <div className="flex items-center justify-between mb-4">
         <h1 className="text-2xl font-bold">📝 攻略</h1>
+        <Link to="/articles/new" className="bg-orange-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-orange-600">发布攻略</Link>
       </div>
 
       <div className="flex flex-wrap gap-2 mb-4">

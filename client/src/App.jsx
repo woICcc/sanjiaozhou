@@ -9,6 +9,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Profile from './pages/Profile'
 import Admin from './pages/Admin'
+import NewArticle from './pages/NewArticle'
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/guns" element={<GunPlaza />} />
           <Route path="/guns/:id" element={<GunDetail />} />
           <Route path="/articles" element={<StrategyList />} />
+          <Route path="/articles/new" element={<NewArticle />} />
           <Route path="/articles/:id" element={<ArticleDetail />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
