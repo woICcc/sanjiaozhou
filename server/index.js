@@ -5,6 +5,7 @@ import gunRoutes from './routes/guns.js'
 import buildRoutes from './routes/builds.js'
 import articleRoutes from './routes/articles.js'
 import commentRoutes from './routes/comments.js'
+import userRoutes from './routes/user.js'
 
 const app = express()
 const PORT = process.env.PORT || 3001
@@ -17,6 +18,7 @@ app.use('/api/guns', gunRoutes)
 app.use('/api/builds', buildRoutes)
 app.use('/api/articles', articleRoutes)
 app.use('/api/comments', commentRoutes)
+app.use('/api/user', userRoutes)
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`)
