@@ -19,14 +19,46 @@ async function main() {
   })
 
   const guns = [
+    // 突击步枪
     { name: 'M4A1', type: '突击步枪', unlockLevel: 1 },
     { name: 'AK-74', type: '突击步枪', unlockLevel: 4 },
     { name: 'SCAR-H', type: '突击步枪', unlockLevel: 10 },
+    { name: 'G36C', type: '突击步枪', unlockLevel: 7 },
+    { name: 'CAR-15', type: '突击步枪', unlockLevel: 3 },
+    { name: 'AUG', type: '突击步枪', unlockLevel: 14 },
+    { name: 'FAMAS', type: '突击步枪', unlockLevel: 18 },
+    { name: 'QBZ-95', type: '突击步枪', unlockLevel: 11 },
+    { name: 'HK416', type: '突击步枪', unlockLevel: 20 },
+    { name: 'AK-12', type: '突击步枪', unlockLevel: 16 },
+    { name: 'M16A4', type: '突击步枪', unlockLevel: 5 },
+    // 冲锋枪
     { name: 'MP5', type: '冲锋枪', unlockLevel: 2 },
     { name: 'Vector', type: '冲锋枪', unlockLevel: 8 },
+    { name: 'MP7', type: '冲锋枪', unlockLevel: 6 },
+    { name: 'P90', type: '冲锋枪', unlockLevel: 13 },
+    { name: 'UMP45', type: '冲锋枪', unlockLevel: 9 },
+    { name: 'PP-19', type: '冲锋枪', unlockLevel: 4 },
+    { name: 'MAC-10', type: '冲锋枪', unlockLevel: 3 },
+    // 狙击枪
     { name: 'SR-25', type: '狙击枪', unlockLevel: 12 },
     { name: 'AWP', type: '狙击枪', unlockLevel: 15 },
+    { name: 'M700', type: '狙击枪', unlockLevel: 10 },
+    { name: 'VSS', type: '狙击枪', unlockLevel: 17 },
+    { name: 'PSG-1', type: '狙击枪', unlockLevel: 22 },
+    { name: 'M24', type: '狙击枪', unlockLevel: 19 },
+    // 霰弹枪
     { name: 'M870', type: '霰弹枪', unlockLevel: 6 },
+    { name: 'AA-12', type: '霰弹枪', unlockLevel: 16 },
+    { name: 'SPAS-12', type: '霰弹枪', unlockLevel: 11 },
+    { name: 'S12K', type: '霰弹枪', unlockLevel: 8 },
+    // 轻机枪
+    { name: 'M249', type: '轻机枪', unlockLevel: 20 },
+    { name: 'RPK', type: '轻机枪', unlockLevel: 14 },
+    { name: 'MG4', type: '轻机枪', unlockLevel: 18 },
+    // 射手步枪
+    { name: 'Mini-14', type: '射手步枪', unlockLevel: 9 },
+    { name: 'SVD', type: '射手步枪', unlockLevel: 13 },
+    { name: 'Mk12', type: '射手步枪', unlockLevel: 11 },
   ]
 
   for (const gun of guns) {
