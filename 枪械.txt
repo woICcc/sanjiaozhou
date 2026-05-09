@@ -1,0 +1,71 @@
+突击步枪 (Assault Rifles)
+AK-12
+AKM
+AKS-74U
+ASH-12
+AS Val
+AUG
+AR57
+CAR-15
+G3
+K416
+K437
+KC17
+M16A4
+M4A1
+M7
+MK47
+MCX LT
+PTR-32
+QBZ95-1
+SCAR-H
+SG552
+冲锋枪 (Submachine Guns)
+MP5
+MP7
+MK4
+P90
+QCQ171
+SMG-45
+SR-3M
+UZI
+Vector
+勇士 
+野牛
+狙击步枪 (Sniper Rifles)
+AWM
+M700
+M82(巴雷特)
+R93
+SV-98
+精确射手步枪 (Marksman Rifles)
+M14 
+MINI-14
+PSG-1
+SR-25
+SR9
+SKS
+SVD
+VSS
+杠杆式步枪
+轻机枪 (Light Machine Guns)
+M249
+M250
+PKM
+QJB201
+ 霰弹枪 (Shotguns)
+725双管
+FS-12
+M1014
+M870
+S12K
+ 手枪 (Pistols)
+M1911
+.357 左轮 (Revolver)
+93R
+沙漠之鹰 (Desert Eagle)
+G17
+G18
+QSZ92G
+特殊武器 (Special Weapons)
+复合弓

@@ -8,6 +8,8 @@ export default function GunCard({ gun }) {
     '霰弹枪': 'bg-purple-100 text-purple-800',
     '轻机枪': 'bg-yellow-100 text-yellow-800',
     '射手步枪': 'bg-indigo-100 text-indigo-800',
+    '手枪': 'bg-pink-100 text-pink-800',
+    '特殊武器': 'bg-teal-100 text-teal-800',
   }
 
   return (

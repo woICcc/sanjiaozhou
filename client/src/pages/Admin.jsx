@@ -3,7 +3,7 @@ import api from '../api'
 import { useAuth } from '../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
 
-const types = ['突击步枪', '冲锋枪', '狙击枪', '霰弹枪', '轻机枪', '射手步枪']
+const types = ['突击步枪', '冲锋枪', '狙击枪', '射手步枪', '轻机枪', '霰弹枪', '手枪', '特殊武器']
 
 export default function Admin() {
   const { user, loading } = useAuth()
