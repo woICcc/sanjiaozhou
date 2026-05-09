@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+*.db
+*.db-journal
+.claude/
+新建 文本文档.txt
+规划书.txt

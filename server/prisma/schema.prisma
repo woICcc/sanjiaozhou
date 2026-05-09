@@ -1,0 +1,92 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int           @id @default(autoincrement())
+  username     String        @unique
+  email        String        @unique
+  passwordHash String
+  role         String        @default("user")
+  createdAt    DateTime      @default(now())
+  builds       Build[]
+  articles     Article[]
+  buildLikes   BuildLike[]
+  articleLikes ArticleLike[]
+  comments     Comment[]
+}
+
+model Gun {
+  id          Int     @id @default(autoincrement())
+  name        String  @unique
+  type        String
+  image       String?
+  unlockLevel Int?
+  createdAt   DateTime @default(now())
+  builds      Build[]
+}
+
+model Build {
+  id          Int        @id @default(autoincrement())
+  gunId       Int
+  userId      Int
+  name        String
+  buildCode   String
+  description String?
+  screenshot  String?
+  likesCount  Int        @default(0)
+  createdAt   DateTime   @default(now())
+  gun         Gun        @relation(fields: [gunId], references: [id])
+  user        User       @relation(fields: [userId], references: [id])
+  likes       BuildLike[]
+}
+
+model BuildLike {
+  id        Int      @id @default(autoincrement())
+  buildId   Int
+  userId    Int
+  likedDate DateTime @default(now())
+  build     Build    @relation(fields: [buildId], references: [id])
+  user      User     @relation(fields: [userId], references: [id])
+
+  @@unique([buildId, userId, likedDate])
+}
+
+model Article {
+  id          Int           @id @default(autoincrement())
+  userId      Int
+  title       String
+  content     String
+  category    String?
+  likesCount  Int           @default(0)
+  createdAt   DateTime      @default(now())
+  user        User          @relation(fields: [userId], references: [id])
+  comments    Comment[]
+  likes       ArticleLike[]
+}
+
+model ArticleLike {
+  id        Int     @id @default(autoincrement())
+  articleId Int
+  userId    Int
+  article   Article @relation(fields: [articleId], references: [id])
+  user      User    @relation(fields: [userId], references: [id])
+
+  @@unique([articleId, userId])
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  articleId Int
+  parentId  Int?
+  userId    Int
+  content   String
+  createdAt DateTime @default(now())
+  article   Article  @relation(fields: [articleId], references: [id])
+  user      User     @relation(fields: [userId], references: [id])
+}
