@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 
 export default function Navbar() {
   const { user, logout } = useAuth()
+  const navigate = useNavigate()
 
   return (
     <nav className="bg-gray-900 text-white shadow-lg">
@@ -17,7 +18,7 @@ export default function Navbar() {
             <>
               <Link to="/profile" className="hover:text-orange-300">{user.username}</Link>
               {user.role === 'admin' && <Link to="/admin" className="hover:text-orange-300">管理</Link>}
-              <button onClick={logout} className="text-gray-400 hover:text-white">退出</button>
+              <button onClick={() => { logout(); navigate('/login'); }} className="text-gray-400 hover:text-white">退出</button>
             </>
           ) : (
             <>
